@@ -28,6 +28,7 @@ class Analytics(object):
             self.init_app(app, not(disable_context_processor))
 
     def init_app(self, app, context_processor):
+        self.app = app
         self.build_source(app.config)
 
         if context_processor:
